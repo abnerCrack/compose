@@ -46,6 +46,8 @@ function compose (middleware) {
       if (i === middleware.length) fn = next
       // 如果是undefined 直接返回一个 成功状态的promise 
       if (!fn) return Promise.resolve()
+      // ?? dispatch.bind
+      // next undefined
       try {
         // 返回一个成功状态的promise对象 调用中间件函数 传入上下文 递归调用dispatch 执行下一个中间价
         return Promise.resolve(fn(context, dispatch.bind(null, i + 1)));
@@ -56,3 +58,4 @@ function compose (middleware) {
     }
   }
 }
+
