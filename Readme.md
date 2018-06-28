@@ -1,5 +1,9 @@
 
-# koa-compose
+# koa-compose 源码解读
+
+````
+koa中间件核心处理模块
+````
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
